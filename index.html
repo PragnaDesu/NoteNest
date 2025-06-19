@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <header>NoteNest</header>
+  <div class="container">
+    <div class="note-form">
+      <input type="text" id="title" placeholder="Note Title">
+      <textarea id="content" rows="4" placeholder="Your note here..."></textarea>
+      <select id="category">
+        <option value="">Select Category</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Ideas">Ideas</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Other">Other</option>
+      </select>
+      <button onclick="addNote()">Add Note</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search notes..." oninput="renderNotes()">
+    </div>
+
+    <div class="notes" id="notes-container"></div>
+  </div>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
